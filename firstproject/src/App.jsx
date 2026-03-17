@@ -4,32 +4,50 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const name="Ishant";
+  const greet="Hello Everyone";
+  let x=10;
+  let y=20;
+function fun()
+{
+  return "inside fun function";
+}
+function myname()
+{
+  return "I am Ishant";
+}
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+function sum(a,b)
+{
+  return a+b;
+}
+
+function calc(a, b, op) {
+  if (op === '+') {
+    return a + b;
+  } else if (op === '-') {
+    return a - b;
+  } else {
+    return a * b;
+  }
+}
+  return(
+    
+    <div>
+  <h1>project run</h1>
+  <h3>Value of variable {name}</h3>
+  <h3>Value of variable {greet}</h3>
+  <h3>10+20={x+y}</h3>
+  <h1>Use of function in jsx</h1>
+  <h3>example of simple function {fun()}</h3>
+  <h2>{myname()}</h2>
+  <h3>exam of paramiterize function {sum(60,90)}</h3>
+  <h3>{calc(7,8,"+")}</h3>
+  <h3>{calc(7,8,"-")}</h3>
+  <h3>{calc(7,8)}</h3>
+  </div>
   )
 }
+
 
 export default App
