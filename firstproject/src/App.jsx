@@ -1,42 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import CharacterCounter from './container/CharacterCounter'
 
-// function App() {
-//   return(
-//     <>
-//     <button onClick="callfun()">ok</button>
-//     <h1> </h1>
-//     </>
-//   )
-// }
-//     <div>
-//       <h1>Welcome to new project</h1>
-//    </div>
 
 function App() {
-  function abc() {
-    alert("function Called");
-  }
+  const [data, setCount] = useState("hello")
+  const [isOn, setIsOn] = useState(false);
 
-  function apple() {
-    alert("you have click on apple button");
+  function toggleButton()
+  {
+    setIsOn(!isOn)
   }
-
-  function banana() {
-    alert("you have click on banana button");
+  function fun()
+  {
+    setCount("bye")
   }
 
   return (
-    <div>
-      <h1>Welcome to new project</h1>
+    <>
+      <h1>State of variable</h1>
+      <h1>{data}</h1>
+      <button onClick={fun}>Change Text</button>
+      <h1>Toggle Button</h1>
+      <h3>Status: {isOn ? "ON" : "OFF"}</h3>
+      <button onClick={toggleButton}>{isOn ? "Turn OFF" : "Turn ON"}</button>
       
-      <button onClick={abc}>click</button>
-      <button onClick={apple}>Apple</button>
-      <button onClick={banana}>Banana</button>
-    </div>
-  );
+      <CharacterCounter />
+    </>
+  )
 }
 
 export default App;
