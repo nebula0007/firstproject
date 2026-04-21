@@ -5,7 +5,7 @@ function CharacterCounter() {
 
   return (
     <div className="container">
-      <h2>Character Counter</h2>
+      <h1>Character Counter</h1>
       <input 
         type="text" 
         value={inputText} 
